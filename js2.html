@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>js</title>
+        <style>
+            div {
+                background-color: black;
+                color: white;
+                padding: 25px ;
+               font-size: large;
+               margin-right: 90%;
+            }
+            button {
+                width: 70px;
+                height: 40px;
+                border-radius: 10%;
+                margin-top: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container" >
+            <nav class="navbar bg-body-tertiary">
+                <div class="container-fluid">
+                  <span class="navbar-brand mb-0 h1">Home</span>
+                </div>
+              </nav>
+              <nav class="navbar bg-body-tertiary">
+                <div class="container-fluid">
+                  <span class="navbar-brand mb-0 h1">About us</span>
+                </div>
+              </nav>
+              <nav class="navbar bg-body-tertiary">
+                <div class="container-fluid">
+                  <span class="navbar-brand mb-0 h1">Settings</span>
+                </div>
+              </nav>
+              <nav class="navbar bg-body-tertiary">
+                <div class="container-fluid">
+                  <span class="navbar-brand mb-0 h1">Help</span>
+                </div>
+              </nav>
+              <nav class="navbar bg-body-tertiary">
+                <div class="container-fluid">
+                  <span class="navbar-brand mb-0 h1">Contact us</span>
+                </div>
+              </nav>
+        </div>
+        <button id="btn" onclick="navbar_btn()">Open</button>
+
+
+
+
+        <style>
+            .d-none{
+                display: none;
+            }
+            .d-block{
+                display: block;
+            }
+        </style>
+        <script>
+            function navbar_btn() {
+
+
+                let isClassName = document.getElementById("container").className;
+
+                console.log(isClassName);
+
+                if(isClassName == 'd-none'){
+                    document.getElementById('container').classList.remove('d-none')  
+                    document.getElementById('container').classList.add('d-block')
+
+                }else if (isClassName == 'd-block'){
+                    document.getElementById('container').classList.remove('d-block')  
+                    document.getElementById('container').classList.add('d-none')
+                }else if(isClassName == '' ){
+                    document.getElementById('container').classList.add('d-none')
+                }
+
+            }
+        </script>
+    </body>
+</html>
